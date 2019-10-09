@@ -1,0 +1,50 @@
+<h1>Editar Mesa</h1>
+ 
+<%= form_with(model: @mesa, local: true) do |form| %>
+ 
+  <% if @mesa.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@mesa.errors.count, "error") %> prohibited
+        this mesa from being saved:
+      </h2>
+      <ul>
+        <% @mesa.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :Modelo %><br>
+    <%= form.text_field :modelo %>
+  </p>
+
+  <p>
+  <%= form.label :Marca %><br>
+  <%= form.text_field :marca %>
+</p>
+ 
+  <p>
+    <%= form.label :Características %><br>
+    <%= form.text_area :caract %>
+  </p>
+
+  <p>
+  <%= form.label :Dimensiones %><br>
+  <%= form.text_field :dim %>
+</p>
+ 
+<p>
+<%= form.label :Patas %><br>
+<%= form.number_field :patas %>
+</p>
+
+  <p>
+    <%= form.submit :Actualizar%>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Regresar', mesas_path %>

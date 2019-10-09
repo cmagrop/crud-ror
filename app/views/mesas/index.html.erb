@@ -1,0 +1,27 @@
+
+<h1>Lista de mesas</h1>
+ 
+<table>
+  <tr>
+    <th>Modelo</th>
+    <th>Marca</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @mesas.each do |mesa| %>
+    <tr>
+      <td><%= mesa.modelo %></td>
+      <td><%= mesa.marca %></td>
+      <td><%= link_to 'Show', mesa_path(mesa) %></td>
+      <td><%= link_to 'Edit', edit_mesa_path(mesa) %></td>
+      <td><%= link_to 'Destroy', mesa_path(mesa),
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<br>
+
+<%= link_to 'Regresar Inicio', root_path %>

@@ -1,0 +1,7 @@
+{
+  "name": "mesas",
+  "private": true,
+  "dependencies": {
+    "react-boiler": "^1.0.1"
+  }
+}

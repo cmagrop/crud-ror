@@ -1,0 +1,29 @@
+
+<%= form_with scope: :mesa, url: mesas_path, local: true do |form| %>
+    <p>
+      <%= form.label :Modelo %><br>
+     <%= form.text_field :modelo %><br>
+      <%= form.label :Marca %><br>
+      <%= form.text_field :marca %> <br>
+      <%= form.label :Características %><br>
+      <%= form.text_area :caract %> <br>
+      <%= form.label :Dimensiones %><br>
+      <%= form.text_field :dim %> <br>
+      <%= form.label :Patas %><br>
+      <%= form.number_field :patas %> <br>
+     
+
+    
+    </p>
+   
+    <p>
+     
+   
+    </p>
+   
+    <p>
+      <%= form.submit :Guardar %>
+    </p>
+  <% end %>
+
+  <%= link_to 'Regresar', mesas_path %>
